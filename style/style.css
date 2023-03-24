@@ -1000,6 +1000,7 @@ text-decoration: none;
     .about__container img {
         min-height: 500px;
         max-height: 500px;
+        object-fit: cover;
     }
     .adventages__item span {
         font-size: 36px;
