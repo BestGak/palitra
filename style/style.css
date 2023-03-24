@@ -204,7 +204,8 @@ header {
 .about__description,
 .question__title,
 .contacts__title,
-.whyus__title {
+.whyus__title,
+.connect__title {
     margin-bottom: 60px;
 }
 hr {
@@ -214,7 +215,8 @@ hr {
     height: 50px;
     border: none;
 }
-.adventages {
+.adventages,
+.connect {
     padding: 120px 0;
 }
 .adventages__title {
@@ -790,7 +792,8 @@ text-decoration: none;
     background-color: #FCDD03;
     color: #202020;
 }
-.portfolio-page__title {
+.portfolio-page__title,
+.socials__title {
     margin-bottom: 60px;
 }
 .portfolio-page__tab.tab--active {
@@ -826,6 +829,90 @@ text-decoration: none;
     left: 0;
     top: 0;
     background: #00000099;
+}
+.connect__wrapper {
+    display: flex;
+    background-color: #202020;
+}
+.connect__info {
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 43px;
+}
+.connect__info-wrapper {
+    display: flex;
+    gap: 10px;
+}
+.connect__info-text {
+    display: flex;
+    gap: 21px;
+    flex-direction: column;
+}
+.connect__info-name {
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+}
+.connect__info-description {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    line-height: 30px;
+}
+.socials {
+    padding-bottom: 120px;
+}
+.socials__item {
+    background-color: #202020;
+    transition: all .5s;
+    padding: 95px;
+    display: block;
+    position: relative;
+}
+.socials__item:hover {
+    box-shadow: 0px 0.4375px 2.948437452316284px 0px #FCDD030C;
+    box-shadow: 0px 2px 8.287500381469727px 0px #FCDD0313;
+    box-shadow: 0px 5.0625px 22.232812881469727px 0px #FCDD031A;
+    box-shadow: 0px 10px 51px 0px #FCDD0326;
+
+}
+.socials__item::after {
+    position: absolute;
+    bottom: -38px;
+    left: 0;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+    color: #fff;
+}
+.socials__item:nth-of-type(1)::after {
+    content: 'Instagram';
+}
+.socials__item:nth-of-type(2)::after {
+    content: 'Facebook';
+}
+.socials__item:nth-of-type(3)::after {
+    content: 'Telegram';
+}
+.socials__item:nth-of-type(4)::after {
+    content: 'WhatsApp';
+}
+.socials__item  svg{
+    width: 70px;
+    height: 70px;
+}
+.socials__item svg path {
+    fill: #FCDD03;
+}
+.socials__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+.contacts__wrapper img {
+    width: 50%;
+    min-height: 654px;
 }
 @media screen and (min-width: 1023px) and (max-width: 1200px) {
     .service__item-title {
@@ -952,6 +1039,31 @@ text-decoration: none;
     .portfolio-page__tabs {
         gap: 20px;
     }
+    .connect__info-name {
+        font-size: 14px;
+        line-height: 21px;
+    }
+    .connect__info-description {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .connect__info-wrapper svg {
+        min-width: 25px;
+        max-width: 25px;
+        height: 25px;
+    }
+    .connect__info {
+        padding: 60px 20px;
+    }
+    .socials__wrapper {
+        grid-template-columns: repeat(2 , 1fr);
+        gap: 70px 20px;
+    }
+    .socials__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 @media screen and (min-width:767px) and (max-width: 850px) {
     .adventages__item {
@@ -1004,7 +1116,9 @@ text-decoration: none;
     .service__title,
     .portfolio__title,
     .main__description, .about__description, .question__title, .contacts__title, .reviews__title,
-    .whyus__title,.team__title {
+    .whyus__title,.team__title,
+    .connect__title,
+    .socials__title {
         margin-bottom: 40px;
     }
     .adventages__item {
@@ -1021,7 +1135,8 @@ text-decoration: none;
         max-width: 100%;
         padding-top: 0;
     }
-    .contact__container iframe {
+    .contact__container ,
+    .contacts__wrapper img {
         min-height: 250px;
         width: 100%;
     }
@@ -1036,7 +1151,8 @@ text-decoration: none;
         flex-direction: column;
         align-items: center;
     }
-    .footer__container {
+    .footer__container,
+    .socials {
         padding-bottom: 60px;
     }
     footer {
@@ -1107,8 +1223,29 @@ text-decoration: none;
     .portfolio-page__grid {
         grid-template-columns: repeat(2,1fr);
     }
-    .portfolio-page {
+    .portfolio-page,
+    .connect {
         padding: 60px 0;
+    }
+
+    .connect__info-description {
+        font-size: 14px;
+        line-height: 21px;
+    }
+    .connect__wrapper {
+        flex-direction: column-reverse;
+    }
+    .connect__info {
+        padding: 40px 20px;
+        gap: 20px;
+    }
+    .connect__wrapper iframe {
+        width: 100%;
+        min-height: 250px;
+        max-height: 250px;
+    }
+    .socials__item {
+        padding: 50px;
     }
 }
 @media screen and (max-width: 550px) {
@@ -1170,6 +1307,20 @@ text-decoration: none;
         display: grid;
         grid-template-columns: repeat(2 ,1fr);
         gap: 20px;
+    }
+    .contacts__title {
+        max-width: 305px;
+    }
+    .socials__item {
+        gap: 50px 20px;
+    }
+    .socials__item svg {
+        width: 50px;
+        height: 50px;
+    }
+    .socials__item::after {
+        font-size: 14px;
+        line-height: 21px;
     }
 }
 
