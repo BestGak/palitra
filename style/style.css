@@ -202,14 +202,21 @@ header {
     /* max-height: 924px; */
     width: 50%;
 }
-.main__description,
-.about__description,
 .question__title,
 .contacts__title,
 .whyus__title,
 .connect__title,
 .services__title {
     margin-bottom: 60px;
+}
+.about__description {
+    margin-bottom: 0;
+}
+.main__btn,
+.about__btn {
+    display: block;
+    margin-top: 60px;
+    width: fit-content;
 }
 hr {
     background: linear-gradient(97.48deg, #FBBB01 0%, #F48503 100%), #D9D9D9;
@@ -1344,6 +1351,10 @@ text-decoration: none;
     }
     .services__wrapper {
         gap: 20px;
+    }
+    .main__btn,
+    .about__btn {
+        margin-top: 40px;
     }
 }
 @media screen and (max-width: 550px) {
