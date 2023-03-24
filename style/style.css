@@ -867,7 +867,7 @@ text-decoration: none;
     line-height: 30px;
 }
 .socials {
-    padding-bottom: 120px;
+    padding-bottom: 160px;
 }
 .socials__item {
     background-color: #202020;
@@ -919,6 +919,7 @@ text-decoration: none;
 .contacts__wrapper img {
     width: 50%;
     min-height: 654px;
+    object-fit: cover;
 }
 .services__wrapper {
     display: flex;
@@ -984,7 +985,9 @@ text-decoration: none;
         gap: 20px;
     }
     .main__container img {
-        min-height: 924px;
+        min-height: 550px;
+        max-height: 600px;
+        object-fit: cover;
     }
     h2 {
         font-size: 36px;
@@ -1199,9 +1202,10 @@ text-decoration: none;
         max-width: 100%;
         padding-top: 0;
     }
-    .contact__container ,
+
     .contacts__wrapper img {
         min-height: 250px;
+        max-height: 250px;
         width: 100%;
     }
     .contact__container button {
@@ -1216,9 +1220,12 @@ text-decoration: none;
         align-items: center;
     }
     .footer__container,
-    .socials,
+    
     .whoneed {
         padding-bottom: 60px;
+    }
+    .socials {
+        padding-bottom: 100px;
     }
     footer {
         padding: 60px 0 50px;
