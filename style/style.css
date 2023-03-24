@@ -1357,6 +1357,7 @@ text-decoration: none;
         margin-top: 40px;
     }
 }
+
 @media screen and (max-width: 550px) {
     .menu {
         padding: 60px 20px;
