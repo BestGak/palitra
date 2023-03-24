@@ -1247,6 +1247,11 @@ text-decoration: none;
     .socials__item {
         padding: 50px;
     }
+    .contact__container iframe {
+        width: 100%;
+        min-height: 250px;
+        max-height: 250px;
+    }
 }
 @media screen and (max-width: 550px) {
     .menu {
