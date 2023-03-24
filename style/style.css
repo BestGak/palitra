@@ -137,7 +137,9 @@ header {
     background-color: #202020;
     padding: 23px 0;
     width: 100%;
-    transition: all .5s;
+    /* transition: all .5s; */
+    transition: all 0.3s ease-in-out;
+    position: relative;
     z-index: 10;
 }
 .header__container {
@@ -205,7 +207,8 @@ header {
 .question__title,
 .contacts__title,
 .whyus__title,
-.connect__title {
+.connect__title,
+.services__title {
     margin-bottom: 60px;
 }
 hr {
@@ -216,7 +219,8 @@ hr {
     border: none;
 }
 .adventages,
-.connect {
+.connect,
+.services {
     padding: 120px 0;
 }
 .adventages__title {
@@ -244,7 +248,8 @@ hr {
     line-height: 60px;
     color: #FCDD03;
 }
-.service {
+.service,
+.whoneed {
     padding-bottom: 120px;
 }
 .service__container {
@@ -793,7 +798,8 @@ text-decoration: none;
     color: #202020;
 }
 .portfolio-page__title,
-.socials__title {
+.socials__title,
+.whoneed__title {
     margin-bottom: 60px;
 }
 .portfolio-page__tab.tab--active {
@@ -913,6 +919,53 @@ text-decoration: none;
 .contacts__wrapper img {
     width: 50%;
     min-height: 654px;
+}
+.services__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.services__item {
+    display: flex;
+}
+.services__item-text {
+    display: flex;
+    padding: 60px;
+    background: #202020;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    max-height: 100%;
+}
+.services__item-title {
+    font-size: 24px;
+    line-height: 36px;
+    color: #fff;
+    text-transform: uppercase;
+}
+.services__item-text a {
+    width: fit-content;
+}
+.services__item img {
+    width: 48%;
+}
+.whoneed__wrapper.question {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.whoneed__wrapper.question .tab-label {
+    margin-bottom: 10px;
+}
+.whoneed__wrapper.question .tab-content {
+    background-color: #202020;
+}
+.whoneed__wrapper.question .tab-content p:last-of-type {
+    margin-bottom: 0;
+}
+.whoneed__wrapper.question .tab-label::after {
+    color: #FCDD03;
 }
 @media screen and (min-width: 1023px) and (max-width: 1200px) {
     .service__item-title {
@@ -1064,6 +1117,15 @@ text-decoration: none;
         align-items: center;
         justify-content: center;
     }
+    .services__item-text {
+        padding: 60px 20px;
+    }
+    .services__item-description {
+        margin-bottom: 60px;
+    }
+    .services__item-title {
+        margin-bottom: 10px;
+    }
 }
 @media screen and (min-width:767px) and (max-width: 850px) {
     .adventages__item {
@@ -1118,7 +1180,9 @@ text-decoration: none;
     .main__description, .about__description, .question__title, .contacts__title, .reviews__title,
     .whyus__title,.team__title,
     .connect__title,
-    .socials__title {
+    .socials__title,
+    .services__title,
+    .whoneed__title{
         margin-bottom: 40px;
     }
     .adventages__item {
@@ -1152,7 +1216,8 @@ text-decoration: none;
         align-items: center;
     }
     .footer__container,
-    .socials {
+    .socials,
+    .whoneed {
         padding-bottom: 60px;
     }
     footer {
@@ -1224,7 +1289,8 @@ text-decoration: none;
         grid-template-columns: repeat(2,1fr);
     }
     .portfolio-page,
-    .connect {
+    .connect,
+    .services {
         padding: 60px 0;
     }
 
@@ -1251,6 +1317,25 @@ text-decoration: none;
         width: 100%;
         min-height: 250px;
         max-height: 250px;
+    }
+    .services__item {
+        flex-direction: column;
+    }
+    .services__item img {
+        width: 100%;
+    }
+    .services__item-text {
+        padding: 40px 20px;
+    }
+    .services__item-title {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .services__item-description {
+        margin-bottom: 40px;
+    }
+    .services__wrapper {
+        gap: 20px;
     }
 }
 @media screen and (max-width: 550px) {

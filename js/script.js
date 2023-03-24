@@ -66,3 +66,17 @@ for (let i = 0; i < tabs.length; i++) {
 Fancybox.bind("[data-fancybox]", {
   // Custom options for all galleries
 });
+
+const smoothLinks = document.querySelectorAll('a[href^="#"]');
+for (let smoothLink of smoothLinks) {
+    smoothLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        const id = smoothLink.getAttribute('href');
+
+        document.querySelector(id).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+};
+	
